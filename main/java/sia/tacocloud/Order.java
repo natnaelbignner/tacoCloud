@@ -12,7 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.Table;
-
+//This is domain object
 import lombok.Data;
 
 @Data
@@ -36,6 +36,7 @@ public class Order implements Serializable {
     private List<Taco> tacos = new ArrayList<>();
 
     public void addDesign(Taco design) {
+        System.out.println(design.toString);
         this.tacos.add(design);
     }
 
